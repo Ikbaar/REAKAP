@@ -1,0 +1,571 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Montserrat:wght@400;600&display=swap');
+
+:root {
+    --primary-color: #4A9352;
+    --secondary-color: #004225;
+    --text-color: #333;
+    --background-color: #f8f9fa;
+    --border-color: #e0e0e0;
+    --hover-color: #e0f2e9;
+}
+
+body.auth {
+    background: linear-gradient(135deg, #f0f4f8, #dbeaff);
+    height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 380px;
+    padding: 20px;
+}
+
+.login-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.login-logo {
+    width: 60px;
+    height: auto;
+    margin-top: 10px;
+}
+
+.form-floating-input {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.form-floating-input input {
+    width: 100%;
+    padding: 12px 5px 5px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    transition: 0.3s;
+    font-size: 16px;
+    background: transparent;
+}
+
+.form-floating-input label {
+    position: absolute;
+    left: 5px;
+    top: 12px;
+    color: #888;
+    pointer-events: none;
+    transition: 0.3s ease;
+}
+
+.form-floating-input input:focus,
+.form-floating-input input:not(:placeholder-shown) {
+    border-bottom-color: #4A9352;
+}
+
+.form-floating-input input:focus + label,
+.form-floating-input input:not(:placeholder-shown) + label {
+    top: -8px;
+    font-size: 12px;
+    color: #4A9352;
+    background: #fff;
+    padding: 0 4px;
+}
+
+.invalid {
+    border-bottom-color: #dc3545 !important;
+}
+
+.error-text {
+    font-size: 13px;
+    color: #dc3545;
+    text-align: left;
+    margin-top: 4px;
+}
+
+.login-btn {
+    background: #0d6efd;
+    color: #fff;
+    border: none;
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.login-btn:hover {
+    background: #004225;
+}
+
+
+/* admin-layout.css */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    background-color: #e5e4e2;
+}
+
+.layout-container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.sidebar-fixed {
+    width: 250px;
+    background-color: #2c2f33;
+    color: white;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    overflow-y: auto;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.content-area {
+    margin-left: 250px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.content-scroll {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+
+/* admin-sidebar.css */
+
+.sidebar-custom {
+    width: 250px;
+    height: 100vh;
+    background-color: #4A9352;
+    color: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.sidebar-custom .nav-link {
+    position: relative;
+    display: block;
+    color: #e5e4e2;
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 30px 0 0 30px;
+    transition: all 0.3s ease;
+    z-index: 1;
+    overflow: visible;
+    background-color: transparent;
+}
+
+/* Efek hover keluar dari sidebar */
+.sidebar-custom .nav-link:hover,
+.sidebar-custom .nav-link.active {
+    color: #004225;
+    background-color: #e5e4e2;
+    margin-right: -16px;
+    padding-left: 26px;
+    box-shadow: 5px 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+
+
+.sidebar-custom h4 {
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+
+/* Ukuran fleksibel kiri-kanan */
+:root {
+    --card-bg: #ffffff;
+    --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    --border-radius: 10px;
+    --font-main: 'Segoe UI', sans-serif;
+    --text-color: #333;
+    --gap: 20px;
+}
+
+body {
+    font-family: var(--font-main);
+    background: #f5f7fa;
+    color: var(--text-color);
+}
+
+.dashboard-main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
+    padding: var(--gap);
+}
+
+.dashboard-main .card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    transition: box-shadow 0.3s ease;
+    flex: 1 1 45%;
+}
+
+.dashboard-main .card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-main .card h3 {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+.dashboard-main .card canvas,
+.dashboard-main .card #calendar {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Bar chart full width */
+.dashboard-main .card:nth-child(3) {
+    flex: 1 1 100%;
+}
+
+/* Responsive fallback */
+@media (max-width: 768px) {
+    .dashboard-main .card {
+        flex: 1 1 100%;
+    }
+}
+
+
+
+
+/* data petani */
+/* Section: Import Excel */
+.section-import .input-group {
+    max-width: 400px;
+    margin-bottom: 1rem;
+}
+
+.section-import input[type="file"] {
+    border: 1.5px solid #ced4da;
+    border-radius: 6px 0 0 6px;
+    padding: 0.4rem 0.6rem;
+    font-size: 0.9rem;
+    background-color: #fff;
+    transition: border-color 0.3s;
+}
+
+.section-import input[type="file"]:focus {
+    border-color: #28a745;
+    outline: none;
+    box-shadow: 0 0 0 0.1rem rgba(40, 167, 69, 0.25);
+}
+
+.section-import button {
+    border-radius: 0 6px 6px 0;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.section-import button:hover {
+    background-color: #28a745;
+    color: #fff;
+}
+
+/* Section: Tambah Petani & Search */
+.section-actions {
+    align-items: center;
+}
+
+.section-actions .btn-outline-primary {
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+}
+
+.section-actions .btn-outline-primary:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.section-actions input[type="text"] {
+    padding: 0.4rem 0.75rem;
+    border-radius: 6px;
+    border: 1.5px solid #ced4da;
+    font-size: 0.9rem;
+    transition: border-color 0.3s ease;
+}
+
+.section-actions input[type="text"]:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 0 0.1rem rgba(0, 123, 255, 0.2);
+}
+
+/* Section: Tabel Data */
+.section-table .card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.section-table .table {
+    margin-bottom: 0;
+    font-size: 0.875rem;
+}
+
+.section-table thead th {
+    background-color: #f4f6f8;
+    font-weight: 600;
+    color: #343a40;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    white-space: nowrap;
+}
+
+.section-table tbody tr:hover {
+    background-color: #f8f9fa;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.section-table td,
+.section-table th {
+    vertical-align: middle;
+    padding: 0.65rem;
+    border-color: #dee2e6;
+}
+
+/* Action Buttons in Table */
+.section-table .btn-outline-warning,
+.section-table .btn-outline-danger {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+.section-table .btn-outline-warning:hover {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+.section-table .btn-outline-danger:hover {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+
+.edit-petani-page h2 {
+    font-weight: 700;
+    color: #333;
+}
+
+.edit-petani-page label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #444;
+}
+
+.edit-petani-page input.form-control {
+    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+.edit-petani-page .btn {
+    min-width: 100px;
+}
+
+
+/* footer */
+
+.admin-footer {
+    background-color: #f8f9fa;
+    border-top: 1px solid #dee2e6;
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+.admin-footer .footer-highlight {
+    color: #0d6efd; /* Bootstrap primary */
+    font-weight: 600;
+}
+
+/* Container styling */
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Heading */
+h2 {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+/* Info Section */
+.mb-3 {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Map */
+#map {
+    border-radius: 10px;
+    border: 2px solid #dee2e6;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+/* Back button */
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 500;
+    padding: 10px 18px;
+    border-radius: 6px;
+    background-color: #6c757d;
+    border: none;
+    transition: background-color 0.2s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+
+
+/* === DARK MODE === */
+
+/* Icon color default */
+
+#themeIcon {
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+#themeIcon:hover {
+    transform: rotate(15deg);
+}
+
+
+body.dark-mode #themeIcon {
+    color: #f1f1f1;
+}
+
+
+/* Smooth transition untuk switch background (opsional) */
+.form-check-input {
+    cursor: pointer;
+    transition: background-color 0.3s ease, border 0.3s ease;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #f1f1f1;
+}
+
+body.dark-mode a {
+    color: #66b0ff;
+}
+
+body.dark-mode a:hover {
+    color: #3399ff;
+}
+
+body.dark-mode .sidebar-custom {
+    background-color: #404040;
+    color: #f1f1f1;
+}
+
+body.dark-mode .sidebar-custom .nav-link {
+    color: #cfcfcf;
+}
+
+body.dark-mode .sidebar-custom .nav-link.active {
+    background-color: #2f2f2f;
+    color: #ffffff;
+}
+
+body.dark-mode .navbar {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+    border-bottom: 1px solid #2c2c2c;
+}
+
+body.dark-mode .navbar .nav-link {
+    color: #f1f1f1;
+}
+
+body.dark-mode .navbar .nav-link:hover {
+    color: #66b0ff;
+}
+
+body.dark-mode .content-area {
+    background-color: #2f2f2f;
+    color: #f1f1f1;
+}
+
+body.dark-mode .card {
+    background-color: #2c2c2c;
+    color: #f1f1f1;
+    border-color: #3a3a3a;
+}
+
+body.dark-mode .card:hover {
+    border-color: #66b0ff;
+}
+
+body.dark-mode .dropdown-menu {
+    background-color: #2c2c2c;
+    color: #f1f1f1;
+}
+
+body.dark-mode .dropdown-item:hover {
+    background-color: #3a3a3a;
+    color: #ffffff;
+}
+
+/* Optional: smooth transition */
+body,
+.sidebar-custom,
+.navbar,
+.content-area,
+.card,
+.dropdown-menu,
+.dropdown-item {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+
+
+
+
+
